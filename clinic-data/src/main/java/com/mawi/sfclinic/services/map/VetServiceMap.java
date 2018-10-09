@@ -1,11 +1,11 @@
 package com.mawi.sfclinic.services.map;
 
 import com.mawi.sfclinic.model.Vet;
-import com.mawi.sfclinic.services.CrudService;
+import com.mawi.sfclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
