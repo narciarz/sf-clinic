@@ -2,9 +2,11 @@ package com.mawi.sfclinic.services.map;
 
 import com.mawi.sfclinic.model.Vet;
 import com.mawi.sfclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

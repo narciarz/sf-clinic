@@ -5,8 +5,7 @@ import com.mawi.sfclinic.model.Owner;
 import com.mawi.sfclinic.model.Vet;
 import com.mawi.sfclinic.services.OwnerService;
 import com.mawi.sfclinic.services.VetService;
-import com.mawi.sfclinic.services.map.OwnerServiceMap;
-import com.mawi.sfclinic.services.map.VetServiceMap;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,10 +15,12 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    @Autowired
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
