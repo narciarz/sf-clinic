@@ -1,15 +1,15 @@
 package com.mawi.sfclinic.services.map;
 
-import com.mawi.sfclinic.model.Specialty;
-import com.mawi.sfclinic.services.SpecialtiesService;
+import com.mawi.sfclinic.model.Speciality;
+import com.mawi.sfclinic.services.SpecialityService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtiesServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+public class SpecialitiesServiceMap extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
-    public Set<Specialty> findAll() {
+    public Set<Speciality> findAll() {
         return super.findAll();
     }
 
@@ -19,18 +19,18 @@ public class SpecialtiesServiceMap extends AbstractMapService<Specialty, Long> i
     }
 
     @Override
-    public void delete(Specialty object) {
+    public void delete(Speciality object) {
         super.delete(object);
     }
 
     @Override
-    public Specialty save(Specialty object) {
+    public Speciality save(Speciality object) {
         super.save(object);
         return object;
     }
 
     @Override
-    public Specialty findById(Long id) {
+    public Speciality findById(Long id) {
         return super.findById(id);
     }
 }
