@@ -2,11 +2,13 @@ package com.mawi.sfclinic.services.map;
 
 import com.mawi.sfclinic.model.PetType;
 import com.mawi.sfclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {

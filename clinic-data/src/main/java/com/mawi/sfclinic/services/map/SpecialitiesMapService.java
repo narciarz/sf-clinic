@@ -2,11 +2,13 @@ package com.mawi.sfclinic.services.map;
 
 import com.mawi.sfclinic.model.Speciality;
 import com.mawi.sfclinic.services.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialitiesMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
     public Set<Speciality> findAll() {
